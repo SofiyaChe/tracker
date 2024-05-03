@@ -3,6 +3,7 @@ package ru.pojo;
 public class Student {
     private String fio;
     private String group;
+    private String date;
 
     public String getFio() {
         return fio;
@@ -27,7 +28,4 @@ public class Student {
     public void setDate(String date) {
         this.date = date;
     }
-
-    private String date;
-
 }
