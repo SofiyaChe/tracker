@@ -14,13 +14,7 @@ public class Tracker {
     }
 
     public Item[] findAll() {
-        Item[] newItems = new Item[size];
-        for (int index = 0; index < newItems.length; index++) {
-            if (items[index] != null) {
-                newItems[index] = items[index];
-            }
-        }
-        return Arrays.copyOf(newItems, size);
+        return Arrays.copyOf(items, size);
     }
 
     public Item[] findByName(String key) {
@@ -55,6 +49,7 @@ public class Tracker {
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
         if (index != -1) {
+            item.setId(id);
             items[index] = item;
             return true;
         }
